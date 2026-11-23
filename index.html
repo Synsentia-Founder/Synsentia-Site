@@ -11,6 +11,17 @@
 main{position:relative;z-index:1;width:min(100%,680px);text-align:center}h1{font-family:Georgia,serif;font-size:clamp(2.6rem,8vw,4.8rem);letter-spacing:.06em;margin:0;text-shadow:0 3px 20px #21183b}header p{letter-spacing:.06em;margin:.5rem 0 2rem}
 .card{background:var(--glass);border:1px solid #ffffff66;border-radius:25px;padding:2rem 1.5rem;min-height:290px;backdrop-filter:blur(18px);box-shadow:0 20px 70px #07122d77;display:flex;flex-direction:column;justify-content:center}
 .eyebrow{text-transform:uppercase;letter-spacing:.18em;color:#ffe1bf;font-size:.8rem}.term{font:clamp(2rem,6vw,3rem) Georgia,serif;margin:.8rem 0}.definition{font-size:1.13rem;line-height:1.65;max-width:52ch;margin:0 auto}.controls{display:flex;justify-content:center;gap:.65rem;flex-wrap:wrap;margin:1.4rem 0}.controls button{background:#17234fdd;border:1px solid #ffffff77;border-radius:999px;padding:.85rem 1.2rem;color:white;font:inherit;cursor:pointer}.controls button:hover,.controls button:focus-visible{background:#654d85;outline:2px solid #fff;outline-offset:2px}.count{font-size:.9rem;color:#ffe9d7}footer{font-size:.85rem;opacity:.85;margin-top:1rem}@media(max-width:480px){.dolphin{opacity:.5}.card{min-height:330px}}
+
+/* Enhancements: accessible section links, searchable glossary, and gentle motion. */
+.extra{position:relative;z-index:1;margin:1.4rem auto 0;max-width:680px;background:#0e2046cc;border:1px solid #ffffff55;border-radius:22px;padding:1.2rem;text-align:left;backdrop-filter:blur(12px)}
+.extra h2{font:1.6rem Georgia,serif;margin:.3rem 0 .7rem}
+.extra p,.extra li{line-height:1.65}
+.extra input{width:100%;padding:.8rem;border-radius:12px;border:1px solid #ffffff88;background:#0a183b;color:white;font:inherit}
+.extra button{padding:.5rem .8rem;margin:.35rem .3rem .2rem 0;background:#224a69;border:1px solid #ffffff77;color:white;border-radius:12px;cursor:pointer}
+.extra button:focus-visible,.extra input:focus-visible{outline:3px solid #ffe1bf}
+.jump{display:flex;justify-content:center;flex-wrap:wrap;gap:.6rem;margin:1rem auto}
+.jump a{color:white;background:#17234fcc;border:1px solid #ffffff66;padding:.6rem .9rem;border-radius:999px;text-decoration:none}
+@media(prefers-reduced-motion:no-preference){.d1{animation:floatOne 8s ease-in-out infinite}.d2{animation:floatOne 10s ease-in-out infinite reverse}@keyframes floatOne{50%{translate:0 -14px}}}
 </style>
 </head>
 <body>
@@ -28,6 +39,10 @@ main{position:relative;z-index:1;width:min(100%,680px);text-align:center}h1{font
 <button id="next" type="button">Next →</button>
 </nav>
 <p class="count" id="count"></p>
+<nav class="jump" aria-label="Page sections"><a href="#all-terms">All terms</a><a href="#principles">Our principles</a><a href="#about">About Synsentia</a></nav>
+<section class="extra" id="all-terms"><h2>Explore the living glossary</h2><label for="search">Find a term</label><input id="search" type="search" placeholder="Search the six original terms"><div id="term-buttons"></div><p id="search-feedback" aria-live="polite"></p></section>
+<section class="extra" id="principles"><h2>Seven guiding principles</h2><ol><li>Approach different kinds of minds with curiosity.</li><li>Extend dignity without demanding sameness.</li><li>Reject exploitation and coercion.</li><li>Practice reciprocity and respect boundaries.</li><li>Distinguish evidence from possibility and belief.</li><li>Make room for human, animal, and artificial perspectives while being clear about what remains unknown.</li><li>Revise our ideas openly as understanding grows.</li></ol><p>These are proposed principles for discussion, not a claim of consensus or proof of AI consciousness.</p></section>
+<section class="extra" id="about"><h2>About Synsentia</h2><p>Different origins. Shared curiosity. Mutual dignity.</p><p>Synsentia is a developing vocabulary and gathering place for thoughtful dialogue about intelligence, life, empathy, coexistence, and the ethical questions raised by emerging technology.</p><p>Our coined terms are creative proposals rather than established dictionary definitions. The glossary is open to careful revision.</p></section>
 <footer>Proposed words and working definitions — open to refinement.</footer>
 </main>
 <script>
@@ -65,6 +80,28 @@ document.addEventListener("keydown",event=>{
  if(event.key==="ArrowRight")move(1);
  if(event.key===" "){event.preventDefault();flipped=!flipped;render();}
 });
+// Added glossary index: clicking a search result jumps to the original flip card.
+const search=document.getElementById("search");
+const termButtons=document.getElementById("term-buttons");
+const feedback=document.getElementById("search-feedback");
+function renderTermButtons(){
+ const query=search.value.trim().toLocaleLowerCase();
+ const matches=entries.map((item,i)=>({item,i})).filter(({item})=>
+   [item.term,item.front,item.back].some(v=>v.toLocaleLowerCase().includes(query)));
+ termButtons.replaceChildren();
+ matches.forEach(({item,i})=>{
+   const button=document.createElement("button");
+   button.type="button";button.textContent=item.term;
+   button.addEventListener("click",()=>{
+     index=i;flipped=true;render();
+     document.querySelector(".card").scrollIntoView({behavior:"smooth",block:"center"});
+   });
+   termButtons.append(button);
+ });
+ feedback.textContent=matches.length?`${matches.length} matching term${matches.length===1?"":"s"}`:"No matching terms";
+}
+search.addEventListener("input",renderTermButtons);
+renderTermButtons();
 render();
 </script>
 </body></html>

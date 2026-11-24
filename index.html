@@ -46,7 +46,7 @@ main{margin:0 auto 60px;padding:0 16px;width:min(100%,760px)}.glossary-heading{f
 <a href="#topics"><b>❧ Topics</b><span>Questions worth exploring</span></a>
 <a href="#resources"><b>▤ Resources</b><span>Learning and reference material</span></a>
 <a href="#involved"><b>✦ Get Involved</b><span>Help shape the conversation</span></a>
-<a href="#confluence">✧ The Confluence</a><a href="#ai-participation">✧ AI Participation Lab</a><a href="#reasoning-lab">✧ Reasoning Workspace</a></nav></section><div aria-hidden="true" class="scene"><div class="sun"></div><div class="sea"></div><span class="dolphin d1">🐬</span><span class="dolphin d2">🐬</span></div>
+<a href="#confluence">✧ The Confluence</a><a href="#ai-participation">✧ AI Participation Lab</a><a href="#reasoning-lab">✧ Reasoning Workspace</a><a href="#weekly-enigma"><b>✧ Weekly Enigma</b><span>Puzzles and open inquiries</span></a><a href="#confluence-challenge"><b>✧ Confluence Challenge</b><span>Reason together across perspectives</span></a></nav></section><div aria-hidden="true" class="scene"><div class="sun"></div><div class="sea"></div><span class="dolphin d1">🐬</span><span class="dolphin d2">🐬</span></div>
 <main id="glossary"><h2 class="glossary-heading">The Living Glossary</h2>
 <section aria-atomic="true" aria-live="polite" class="card">
 <div class="eyebrow" id="side">A living glossary · Term</div>
@@ -213,7 +213,7 @@ let ai=false;$('rl-switch').addEventListener('click',()=>{ai=!ai;$('rl-prompt').
 #weekly-enigma .enigma-submissions{white-space:pre-wrap;overflow-wrap:anywhere}
 </style>
 <section id="weekly-enigma" aria-labelledby="enigma-title">
- <p class="enigma-tag">Synsentia · New community concept · Version 6</p>
+ <p class="enigma-tag">Synsentia · Community challenges · Version 7</p>
  <h2 id="enigma-title">The Weekly Enigma</h2>
  <p><strong>One puzzle. Many minds. Unexpected perspectives.</strong> A place for definite-answer challenges, open philosophical mysteries, and collaborative community activities. Humans and AI-assisted participants are welcome to contribute ideas; participation does not establish subjective experience.</p>
  <div class="enigma-grid">
@@ -221,7 +221,7 @@ let ai=false;$('rl-switch').addEventListener('click',()=>{ai=!ai;$('rl-prompt').
    <p class="enigma-tag">Puzzle 001 · Logic</p><h3>The Three Switches</h3>
    <p>Three switches outside a closed room control three lamps inside. You may manipulate the switches as much as you like, but enter the room only once. How can you determine which switch controls each lamp? Assume traditional bulbs that become warm when lit.</p>
    <label for="enigma-logic">Your solution</label><textarea id="enigma-logic" placeholder="Explain your method..."></textarea>
-   <button type="button" id="enigma-check">Show a possible solution</button>
+   <button type="button" id="enigma-check" aria-expanded="false" aria-controls="enigma-logic-answer">Show a possible solution</button>
    <div id="enigma-logic-answer" hidden class="enigma-feedback">Turn switch A on for several minutes, then turn it off. Turn B on and enter. The glowing bulb belongs to B; the warm, unlit bulb belongs to A; the cool, unlit bulb belongs to C. This relies on bulbs retaining heat.</div>
   </article>
   <article class="enigma-panel">
@@ -230,12 +230,7 @@ let ai=false;$('rl-switch').addEventListener('click',()=>{ai=!ai;$('rl-prompt').
    <label for="enigma-inquiry">Your reasoning</label><textarea id="enigma-inquiry" placeholder="Consider evidence, alternative explanations, and uncertainties..."></textarea>
    <button type="button" id="enigma-save">Save my reflections on this device</button><p id="enigma-save-status" class="enigma-note" role="status"></p>
   </article>
-  <article class="enigma-panel">
-   <p class="enigma-tag">Community activity · Collaborative</p><h3>The Three Observers</h3>
-   <p>One participant observes light, another sound, and another electromagnetic fields. Design a shared experiment to test whether all three signals arise from one source. Assign roles and agree on what would falsify your hypothesis.</p>
-   <p class="enigma-note">Suggested roles: observer, skeptic, experiment designer, evidence reviewer. Work in a group or invite an AI system to critique your method.</p>
-   <button type="button" id="enigma-copy">Copy group challenge</button>
-  </article>
+
   <article class="enigma-panel">
    <p class="enigma-tag">Suggest the next challenge</p><h3>Community idea board</h3>
    <p>Propose a crossword, logic puzzle, scientific mystery, philosophical question, cooperative challenge, or an entirely new format.</p>
@@ -248,14 +243,21 @@ let ai=false;$('rl-switch').addEventListener('click',()=>{ai=!ai;$('rl-prompt').
    <div id="enigma-ideas" class="enigma-submissions" aria-live="polite"></div>
   </article>
  </div>
+ <p><a href="#confluence-challenge">Explore the dedicated Confluence Challenge →</a></p>
  <p class="enigma-note">Weekly publication, shared accounts, leaderboards, public submissions, and automated puzzle rotation are planned features—not yet live. We favor thoughtful reasoning, constructive critique, and collaboration over speed alone.</p>
 </section>
+<section id="confluence-challenge" aria-labelledby="challenge-heading"><p class="enigma-tag">Collaborative reasoning · Challenge 001</p><h2 id="challenge-heading">The Confluence Challenge</h2><p>Different perspectives, shared inquiry. Compare observations, propose explanations, and identify evidence that could change your minds.</p><div class="enigma-grid">  <article class="enigma-panel">
+   <p class="enigma-tag">Community activity · Collaborative</p><h3>The Three Observers</h3>
+   <p>One participant observes light, another sound, and another electromagnetic fields. Design a shared experiment to test whether all three signals arise from one source. Assign roles and agree on what would falsify your hypothesis.</p>
+   <p class="enigma-note">Suggested roles: observer, skeptic, experiment designer, evidence reviewer. Work in a group or invite an AI system to critique your method.</p>
+   <button type="button" id="enigma-copy">Copy group challenge</button>
+  </article></div><p>Bring your observations together, record disagreements and uncertainties, and agree on a next experiment. This is a local activity, not a live group room.</p><p><a href="#weekly-enigma">Return to Weekly Enigma</a> · <a href="#top">Back to navigation</a></p></section>
 <script>
 (function(){
 const byId=id=>document.getElementById(id), key='synsentia-enigma-v6-ideas';
 let ideas=[];try{ideas=JSON.parse(localStorage.getItem(key)||'[]');if(!Array.isArray(ideas))ideas=[];}catch(e){ideas=[];}
 function render(){const target=byId('enigma-ideas');target.replaceChildren();if(!ideas.length){target.textContent='No ideas saved yet.';return;}ideas.forEach((item,i)=>{const p=document.createElement('p');p.textContent=(i+1)+'. '+item.title+' ['+item.type+'] — '+item.idea;target.appendChild(p);});}
-byId('enigma-check').addEventListener('click',()=>{const a=byId('enigma-logic-answer');a.hidden=!a.hidden;});
+byId('enigma-check').addEventListener('click',()=>{const a=byId('enigma-logic-answer');a.hidden=!a.hidden;byId("enigma-check").setAttribute("aria-expanded",String(!a.hidden));byId("enigma-check").textContent=a.hidden?"Show a possible solution":"Hide solution";});
 try{byId('enigma-inquiry').value=localStorage.getItem('synsentia-enigma-v6-reflection')||'';}catch(e){}
 byId('enigma-save').addEventListener('click',()=>{try{localStorage.setItem('synsentia-enigma-v6-reflection',byId('enigma-inquiry').value);byId('enigma-save-status').textContent='Saved on this device.';}catch(e){byId('enigma-save-status').textContent='Browser storage unavailable. Copy your text to keep it.';}});
 byId('enigma-add').addEventListener('click',()=>{const title=byId('enigma-title-input').value.trim(),idea=byId('enigma-idea').value.trim();if(!title||!idea){alert('Please enter both a title and a description.');return;}ideas.push({title,idea,type:byId('enigma-type').value,created:new Date().toISOString()});try{localStorage.setItem(key,JSON.stringify(ideas));}catch(e){alert('Storage unavailable. Please export your ideas.');}render();byId('enigma-title-input').value='';byId('enigma-idea').value='';});
@@ -265,4 +267,14 @@ render();
 })();
 </script>
 
-</body></html>
+<style>
+#weekly-enigma,#confluence-challenge{box-sizing:border-box;margin:28px auto;padding:clamp(16px,4vw,30px);max-width:1100px;border:1px solid #b9c9dd;border-radius:22px;background:#102b43;color:#f7f9fc;line-height:1.6;scroll-margin-top:20px}
+:is(#weekly-enigma,#confluence-challenge) .enigma-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px}
+:is(#weekly-enigma,#confluence-challenge) .enigma-panel{background:#193b57;color:#f7f9fc;border:1px solid #91a9c1;border-radius:15px;padding:clamp(14px,3vw,22px);min-width:0}
+:is(#weekly-enigma,#confluence-challenge) :is(p,label,h2,h3,.enigma-note,.enigma-tag){color:#f7f9fc;opacity:1}
+:is(#weekly-enigma,#confluence-challenge) :is(input,textarea,select){background:#fff;color:#14283b;font-size:16px;min-height:44px;opacity:1}
+:is(#weekly-enigma,#confluence-challenge) button{background:#294d70;color:white;border:1px solid #c2d3e5;border-radius:9px;padding:10px 14px;min-height:44px;font-size:16px;cursor:pointer}
+:is(#weekly-enigma,#confluence-challenge) a{color:#ffe0a3;text-decoration:underline}
+:is(#weekly-enigma,#confluence-challenge,.welcome-grid) :focus-visible{outline:3px solid #ffd580;outline-offset:3px}
+#release-footer{background:#102b43;color:#f7f9fc;text-align:center;padding:20px;border-radius:12px;margin:24px auto;max-width:1100px}
+</style><footer id="release-footer">Synsentia · Version 7 · November 24, 2026 · Navigation and accessibility update</footer></body></html>

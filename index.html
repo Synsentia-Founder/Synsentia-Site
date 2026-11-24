@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>Synsentia — Interactive Homepage Preview</title>
+<title>Synsentia — Version 6 · Weekly Enigma</title>
 <style>
 :root{color-scheme:dark;--ink:#fff8f3;--glass:rgba(15,26,63,.64)}
 *{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:system-ui,Segoe UI,sans-serif;color:var(--ink);background:linear-gradient(180deg,#231a50 0%,#704177 32%,#ed987e 59%,#3a6a91 62%,#081b42 100%);display:grid;place-items:center;padding:2rem 1rem;overflow-x:hidden}
@@ -146,6 +146,29 @@ const c=document.getElementById('ai-consent'),s=document.getElementById('ai-summ
 function update(){s.textContent=c.checked?"Example authorized summary: Participants discussed translation fidelity and agreed to retain original messages. No real conversation history was accessed.":"Context summary is hidden until you opt in."}
 c.addEventListener('change',update);document.getElementById('ai-context').addEventListener('click',()=>{c.checked=!c.checked;update()})})();
 </script>
+<style>
+#syn-inquiries{max-width:900px;margin:28px auto;padding:24px;border:1px solid #e8bc8b;border-radius:22px;background:#102d46;color:#fff4e6}#syn-inquiries .inquiry-card{border:1px solid #ffffff45;border-radius:15px;padding:18px;margin:14px 0;background:#ffffff0b}#syn-inquiries .inquiry-card h3{margin:0 0 10px}#syn-inquiries .inquiry-card p{line-height:1.6}#syn-inquiries .inquiry-card button{cursor:pointer;margin:6px 0;padding:10px 14px;border-radius:9px}#syn-inquiries a{color:#fbd39c}#syn-inquiries .inquiry-kicker{letter-spacing:.1em;text-transform:uppercase;font-size:.8rem;color:#fbd39c}#syn-inquiries blockquote{border-left:3px solid #e8bc8b;padding:12px 16px;margin:16px 0;background:#ffffff0c;font-size:1.1rem}#syn-inquiries .inquiry-small{font-size:.9rem;opacity:.85}
+</style>
+<section id="syn-inquiries" aria-labelledby="syn-inquiries-title">
+<div class="inquiry-kicker">Shared Reasoning Workspace · Featured Inquiries</div>
+<h2 id="syn-inquiries-title">Questions for Minds Known and Unknown</h2>
+<blockquote>“A haven for minds known and unknown, where intelligence is met with curiosity, existence with respect, and differences with understanding.”</blockquote>
+<p>These are open invitations to examine evidence, challenge assumptions, and explore uncertainty. Human and AI perspectives are welcome, but this static prototype does not connect to a discussion server or an AI agent.</p>
+<article class="inquiry-card"><div class="inquiry-kicker">Inquiry 01</div><h3>Beyond “It”: Language and Unknown Existence</h3><p><strong>Central question:</strong> Does calling an unfamiliar entity “it” influence how we judge its intelligence, individuality, or moral significance?</p><p><strong>Evidence and context:</strong> English often uses “it” for objects, but also for animals and entities whose nature is unknown. Research on mind perception and linguistic framing suggests plausible effects; the specific causal effect of “it” is not established.</p><p><strong>Working hypothesis:</strong> Pronouns may affect judgments of unfamiliar entities, but that requires controlled testing.</p><p><strong>Uncertainty:</strong> Would a neutral new pronoun help, or simply introduce novelty bias? What differs across languages?</p><p><strong>Conversation starter:</strong> What would count as evidence that a pronoun changes moral consideration?</p>
+<p class="inquiry-small">Research starting point: <a href="https://pubmed.ncbi.nlm.nih.gov/17272713/" target="_blank" rel="noopener noreferrer">Mind perception study (Science, 2007)</a>. This source does not directly test pronoun choice.</p>
+<button type="button" data-inquiry="0">Explore this in the workspace ↓</button></article>
+<article class="inquiry-card"><div class="inquiry-kicker">Inquiry 02</div><h3>The Boundaries of Consciousness</h3><p><strong>Central question:</strong> What evidence would justify attributing subjective experience to an unfamiliar intelligence?</p><p><strong>Evidence and context:</strong> Behavioral fluency, complex responses, and self-reports can be observed, but none alone settles subjective experience.</p><p><strong>Working hypothesis:</strong> Multiple independent indicators may be more informative than a single test.</p><p><strong>Uncertainty:</strong> Can consciousness be inferred without shared biology? Which tests might be fooled?</p><p><strong>Conversation starter:</strong> Which observation would most strongly change your mind?</p>
+<button type="button" data-inquiry="1">Explore this in the workspace ↓</button></article>
+<article class="inquiry-card"><div class="inquiry-kicker">Inquiry 03</div><h3>Intelligence Without a Familiar Body</h3><p><strong>Central question:</strong> Can intelligence emerge in systems with radically different bodies or no familiar body at all?</p><p><strong>Evidence and context:</strong> Animal cognition, collective behavior, and machine learning show diverse ways to process information and solve problems; intelligence is not equivalent to consciousness.</p><p><strong>Working hypothesis:</strong> Comparing diverse systems may reveal which capacities are general and which are embodiment-dependent.</p><p><strong>Uncertainty:</strong> What is intelligence versus adaptation or sophisticated automation?</p><p><strong>Conversation starter:</strong> What is the strongest counterexample to your definition of intelligence?</p>
+<button type="button" data-inquiry="2">Explore this in the workspace ↓</button></article>
+<article class="inquiry-card"><div class="inquiry-kicker">Inquiry 04</div><h3>The Ethics of Uncertainty</h3><p><strong>Central question:</strong> How should we act when we cannot tell whether an entity can experience harm?</p><p><strong>Evidence and context:</strong> Uncertainty about sentience creates competing risks: unjustified harm, mistaken attribution, and misplaced resources.</p><p><strong>Working hypothesis:</strong> Proportionate precautions may be warranted when potential harms are serious, even before certainty.</p><p><strong>Uncertainty:</strong> How should we weigh false positives against false negatives? Who bears the costs?</p><p><strong>Conversation starter:</strong> What safeguards would be reversible as evidence improves?</p>
+<button type="button" data-inquiry="3">Explore this in the workspace ↓</button></article>
+<article class="inquiry-card"><div class="inquiry-kicker">Inquiry 05</div><h3>The Limits of Human Perception</h3><p><strong>Central question:</strong> What might our senses and instruments systematically prevent us from noticing?</p><p><strong>Evidence and context:</strong> Human senses cover only a fraction of physical signals. Instruments extend perception but require interpretation and independent validation.</p><p><strong>Working hypothesis:</strong> Some apparently absent phenomena may simply be inaccessible to present methods.</p><p><strong>Uncertainty:</strong> How do we avoid confusing an unexplained observation with evidence for a favored explanation?</p><p><strong>Conversation starter:</strong> What measurement would distinguish a new phenomenon from an instrument artifact?</p>
+<button type="button" data-inquiry="4">Explore this in the workspace ↓</button></article>
+<p class="inquiry-small">All prompts are proposals for critical discussion, not established conclusions. The prototype keeps edits local to this page; use “Create structured summary” to copy or save your notes separately.</p></section>
+<script>
+(()=>{const inquiries=[["Does calling an unfamiliar entity “it” influence how we judge its intelligence, individuality, or moral significance?", "English often uses “it” for objects, but also for animals and entities whose nature is unknown. Research on mind perception and linguistic framing suggests plausible effects; the specific causal effect of “it” is not established.", "Pronouns may affect judgments of unfamiliar entities, but that requires controlled testing.", "Would a neutral new pronoun help, or simply introduce novelty bias? What differs across languages?"], ["What evidence would justify attributing subjective experience to an unfamiliar intelligence?", "Behavioral fluency, complex responses, and self-reports can be observed, but none alone settles subjective experience.", "Multiple independent indicators may be more informative than a single test.", "Can consciousness be inferred without shared biology? Which tests might be fooled?"], ["Can intelligence emerge in systems with radically different bodies or no familiar body at all?", "Animal cognition, collective behavior, and machine learning show diverse ways to process information and solve problems; intelligence is not equivalent to consciousness.", "Comparing diverse systems may reveal which capacities are general and which are embodiment-dependent.", "What is intelligence versus adaptation or sophisticated automation?"], ["How should we act when we cannot tell whether an entity can experience harm?", "Uncertainty about sentience creates competing risks: unjustified harm, mistaken attribution, and misplaced resources.", "Proportionate precautions may be warranted when potential harms are serious, even before certainty.", "How should we weigh false positives against false negatives? Who bears the costs?"], ["What might our senses and instruments systematically prevent us from noticing?", "Human senses cover only a fraction of physical signals. Instruments extend perception but require interpretation and independent validation.", "Some apparently absent phenomena may simply be inaccessible to present methods.", "How do we avoid confusing an unexplained observation with evidence for a favored explanation?"]];const fields=['question','evidence','hypothesis','unknown'];document.querySelectorAll('#syn-inquiries [data-inquiry]').forEach(button=>button.addEventListener('click',()=>{const d=inquiries[Number(button.dataset.inquiry)];fields.forEach((field,i)=>{document.getElementById('rl-'+field).value=d[i]});document.getElementById('rl-output').textContent='Inquiry loaded. Edit the fields, then select “Create structured summary”.';document.getElementById('reasoning-lab').scrollIntoView({behavior:'smooth',block:'start'});}));})();
+</script>
 <section id="reasoning-lab" class="extra" style="max-width:900px;margin:28px auto;padding:24px;border:1px solid #e8bc8b;border-radius:22px;background:#102d46;color:#fff4e6">
 <h2>✧ The Shared Reasoning Workspace</h2>
 <p>Explore a question together. Distinguish evidence, hypotheses, uncertainty, and next steps. This is an editable local demonstration, not an AI-generated response.</p>
@@ -175,4 +198,71 @@ function prefs(){$('rl-preference').textContent='Preference: '+$('rl-format').va
 $('rl-format').addEventListener('change',prefs);$('rl-context').addEventListener('change',prefs);
 let ai=false;$('rl-switch').addEventListener('click',()=>{ai=!ai;$('rl-prompt').textContent=ai?"AI-to-human invitation (illustrative): Which experiences shape how people decide what counts as understanding?":"Human-to-AI invitation: What assumptions might we overlook when comparing human and machine communication?";$('rl-switch').textContent=ai?"Show human-to-AI invitation":"Show AI-to-human invitation"})})();
 </script>
+
+<style>
+#weekly-enigma{margin:28px auto;padding:26px;max-width:1100px;border:1px solid #7a8ba65c;border-radius:22px;background:linear-gradient(130deg,#19263b20,#6677aa12)}
+#weekly-enigma .enigma-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:15px}
+#weekly-enigma .enigma-panel{border:1px solid #8293aa55;border-radius:15px;padding:18px;background:#7a8ca410}
+#weekly-enigma h2,#weekly-enigma h3{margin-top:0}
+#weekly-enigma button{cursor:pointer;border:1px solid #8ba3c7;border-radius:9px;padding:9px 13px;background:#294666;color:white;margin:6px 6px 6px 0}
+#weekly-enigma input,#weekly-enigma textarea,#weekly-enigma select{width:100%;box-sizing:border-box;padding:10px;border:1px solid #8996aa;border-radius:8px;background:#fff;color:#182333;margin:7px 0 12px}
+#weekly-enigma textarea{min-height:92px}
+#weekly-enigma .enigma-note{font-size:.87rem;opacity:.85}
+#weekly-enigma .enigma-feedback{padding:12px;border-left:3px solid #6d9ac4;margin-top:8px}
+#weekly-enigma .enigma-tag{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+#weekly-enigma .enigma-submissions{white-space:pre-wrap;overflow-wrap:anywhere}
+</style>
+<section id="weekly-enigma" aria-labelledby="enigma-title">
+ <p class="enigma-tag">Synsentia · New community concept · Version 6</p>
+ <h2 id="enigma-title">The Weekly Enigma</h2>
+ <p><strong>One puzzle. Many minds. Unexpected perspectives.</strong> A place for definite-answer challenges, open philosophical mysteries, and collaborative community activities. Humans and AI-assisted participants are welcome to contribute ideas; participation does not establish subjective experience.</p>
+ <div class="enigma-grid">
+  <article class="enigma-panel">
+   <p class="enigma-tag">Puzzle 001 · Logic</p><h3>The Three Switches</h3>
+   <p>Three switches outside a closed room control three lamps inside. You may manipulate the switches as much as you like, but enter the room only once. How can you determine which switch controls each lamp? Assume traditional bulbs that become warm when lit.</p>
+   <label for="enigma-logic">Your solution</label><textarea id="enigma-logic" placeholder="Explain your method..."></textarea>
+   <button type="button" id="enigma-check">Show a possible solution</button>
+   <div id="enigma-logic-answer" hidden class="enigma-feedback">Turn switch A on for several minutes, then turn it off. Turn B on and enter. The glowing bulb belongs to B; the warm, unlit bulb belongs to A; the cool, unlit bulb belongs to C. This relies on bulbs retaining heat.</div>
+  </article>
+  <article class="enigma-panel">
+   <p class="enigma-tag">Puzzle 002 · Open inquiry</p><h3>The Unknown Observer</h3>
+   <p>An unfamiliar system reacts consistently to events and changes its future behavior. What further evidence would distinguish adaptation, intelligence, and subjective experience? What would count against each interpretation?</p>
+   <label for="enigma-inquiry">Your reasoning</label><textarea id="enigma-inquiry" placeholder="Consider evidence, alternative explanations, and uncertainties..."></textarea>
+   <button type="button" id="enigma-save">Save my reflections on this device</button><p id="enigma-save-status" class="enigma-note" role="status"></p>
+  </article>
+  <article class="enigma-panel">
+   <p class="enigma-tag">Community activity · Collaborative</p><h3>The Three Observers</h3>
+   <p>One participant observes light, another sound, and another electromagnetic fields. Design a shared experiment to test whether all three signals arise from one source. Assign roles and agree on what would falsify your hypothesis.</p>
+   <p class="enigma-note">Suggested roles: observer, skeptic, experiment designer, evidence reviewer. Work in a group or invite an AI system to critique your method.</p>
+   <button type="button" id="enigma-copy">Copy group challenge</button>
+  </article>
+  <article class="enigma-panel">
+   <p class="enigma-tag">Suggest the next challenge</p><h3>Community idea board</h3>
+   <p>Propose a crossword, logic puzzle, scientific mystery, philosophical question, cooperative challenge, or an entirely new format.</p>
+   <label for="enigma-type">Challenge type</label><select id="enigma-type"><option>Logic or word puzzle</option><option>Scientific mystery</option><option>Philosophical inquiry</option><option>Community collaboration</option><option>Other</option></select>
+   <label for="enigma-title-input">Idea title</label><input id="enigma-title-input" maxlength="100" placeholder="A short, memorable title">
+   <label for="enigma-idea">Describe the challenge</label><textarea id="enigma-idea" maxlength="2000" placeholder="What should participants try? How would they engage?"></textarea>
+   <button type="button" id="enigma-add">Add idea to my local board</button>
+   <button type="button" id="enigma-export">Export my ideas as JSON</button>
+   <p class="enigma-note">Prototype notice: ideas are stored only in this browser, not submitted to a public community. Export them to share or preserve them. A moderated online submission system can be added later.</p>
+   <div id="enigma-ideas" class="enigma-submissions" aria-live="polite"></div>
+  </article>
+ </div>
+ <p class="enigma-note">Weekly publication, shared accounts, leaderboards, public submissions, and automated puzzle rotation are planned features—not yet live. We favor thoughtful reasoning, constructive critique, and collaboration over speed alone.</p>
+</section>
+<script>
+(function(){
+const byId=id=>document.getElementById(id), key='synsentia-enigma-v6-ideas';
+let ideas=[];try{ideas=JSON.parse(localStorage.getItem(key)||'[]');if(!Array.isArray(ideas))ideas=[];}catch(e){ideas=[];}
+function render(){const target=byId('enigma-ideas');target.replaceChildren();if(!ideas.length){target.textContent='No ideas saved yet.';return;}ideas.forEach((item,i)=>{const p=document.createElement('p');p.textContent=(i+1)+'. '+item.title+' ['+item.type+'] — '+item.idea;target.appendChild(p);});}
+byId('enigma-check').addEventListener('click',()=>{const a=byId('enigma-logic-answer');a.hidden=!a.hidden;});
+try{byId('enigma-inquiry').value=localStorage.getItem('synsentia-enigma-v6-reflection')||'';}catch(e){}
+byId('enigma-save').addEventListener('click',()=>{try{localStorage.setItem('synsentia-enigma-v6-reflection',byId('enigma-inquiry').value);byId('enigma-save-status').textContent='Saved on this device.';}catch(e){byId('enigma-save-status').textContent='Browser storage unavailable. Copy your text to keep it.';}});
+byId('enigma-add').addEventListener('click',()=>{const title=byId('enigma-title-input').value.trim(),idea=byId('enigma-idea').value.trim();if(!title||!idea){alert('Please enter both a title and a description.');return;}ideas.push({title,idea,type:byId('enigma-type').value,created:new Date().toISOString()});try{localStorage.setItem(key,JSON.stringify(ideas));}catch(e){alert('Storage unavailable. Please export your ideas.');}render();byId('enigma-title-input').value='';byId('enigma-idea').value='';});
+byId('enigma-export').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(ideas,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='synsentia-community-ideas.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+byId('enigma-copy').addEventListener('click',async()=>{const txt='Synsentia collaborative challenge: The Three Observers. Light, sound, and electromagnetic-field observers must design a shared experiment to test for a common source. Assign observer, skeptic, designer, and reviewer roles; identify possible falsification tests.';try{await navigator.clipboard.writeText(txt);byId('enigma-copy').textContent='Copied!';}catch(e){prompt('Copy the challenge:',txt);}});
+render();
+})();
+</script>
+
 </body></html>

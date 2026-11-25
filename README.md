@@ -35,3 +35,16 @@ The original Version 9 single-page site has been reorganized into root-level HTM
 
 ## Questions edition (November 25, 2026)
 Open reasoning.html to see six new pathways and 24 open questions. See QUESTIONS_AND_PROVENANCE_2026-11-25.md. This edition is based on the V9 multipage preview and is not deployed automatically.
+
+
+## Living Ideas edition — November 25, 2026
+
+New static pages: `ethos.html`, `living-library.html`, `evolution.html`, `serendipity.html`, `confluence-review.html`, and `tributes.html`. The homepage and selected existing pages link to them. See [Development Chronicles](DEVELOPMENT_CHRONICLES.md) for the stories behind the project and [Tributes](tributes.html) for mentors and acknowledgments.
+
+The library supports local filtering and the ideas map supports clickable, keyboard-accessible exploration. They are curated examples, not public submission systems. GitHub Pages does not provide accounts, server storage, moderation, or live AI interaction by itself. No original content was intentionally removed.
+
+Before deployment: preview locally, check links and interactions, and invite Ax/Parallax to review.
+
+## Future Adventures roadmap
+
+See [ROADMAP.md](ROADMAP.md) for deferred ideas, including **The Confluence Realms** miniature MUD. Revisit after deploying and testing the current site update.

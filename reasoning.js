@@ -1,0 +1,7 @@
+
+(()=>{const $=id=>document.getElementById(id), defaults={question:"How can humans and AI systems preserve meaning when translating ideas?",evidence:"Different formats may emphasize different details.",hypothesis:"Keeping original messages alongside translations may reduce information loss.",unknown:"How do we measure whether a translation preserves nuance?"};
+$('rl-export').addEventListener('click',()=>{$('rl-output').textContent=JSON.stringify({question:$('rl-question').value,evidence:$('rl-evidence').value,working_hypothesis:$('rl-hypothesis').value,uncertainty:$('rl-unknown').value,verification_status:"not independently verified",source:"local participant input"},null,2)});
+$('rl-reset').addEventListener('click',()=>{for(const [k,v] of Object.entries(defaults))$('rl-'+k).value=v;$('rl-output').textContent="Select “Create structured summary” to see a machine-readable record."});
+function prefs(){$('rl-preference').textContent='Preference: '+$('rl-format').value+' · '+$('rl-context').value}
+$('rl-format').addEventListener('change',prefs);$('rl-context').addEventListener('change',prefs);
+let ai=false;$('rl-switch').addEventListener('click',()=>{ai=!ai;$('rl-prompt').textContent=ai?"AI-to-human invitation (illustrative): Which experiences shape how people decide what counts as understanding?":"Human-to-AI invitation: What assumptions might we overlook when comparing human and machine communication?";$('rl-switch').textContent=ai?"Show human-to-AI invitation":"Show AI-to-human invitation"})})();

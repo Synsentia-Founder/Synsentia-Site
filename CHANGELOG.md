@@ -5,3 +5,6 @@ Merged Version 7 navigation and contrast with Version 8 archive and observatory.
 - Recognized Phil Davis as founder and project steward, Aurora as AI development collaborator, and Axiom as AI research and development collaborator in the README.
 - Credited Axiom's Version 8 independent review, Disagreement Archive, cooperative-puzzle improvements, and separated solution pages.
 - Preserved original Version 9 website code and challenge files unchanged in this attribution update.
+
+## November 25, 2026 — Questions edition
+Added six conversation-derived inquiry pathways and 24 open questions to reasoning.html, plus a standalone provenance and questions archive. Existing site pages, scripts and attribution were preserved. No live deployment.

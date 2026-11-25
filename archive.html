@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Synsentia · Disagreement Archive</title><meta content="Preserve differences and document revisions." name="description"/><link href="assets/site.css" rel="stylesheet"/></head><body><div aria-hidden="true" class="scene"><div class="sun"></div><div class="sea"></div><span class="dolphin d1">🐬</span><span class="dolphin d2">🐬</span></div><nav aria-label="Site navigation" class="site-nav"><a href="index.html">Home</a><a href="glossary.html">Glossary</a><a href="confluence.html">Confluence</a><a href="reasoning.html">Reasoning</a><a href="challenges.html">Challenges</a><a aria-current="page" href="archive.html">Archive</a><a href="ai-participation.html">AI Lab</a><a href="parallax.html">Parallax</a><a href="explore.html">Explore All</a></nav><header class="page-heading"><h1>Disagreement Archive</h1><p>Preserve differences and document revisions.</p></header><div class="page-content"><section aria-labelledby="v8-title" id="contribution-lab">
+<p class="v8-muted">Synsentia · Version 8 · Local participation tools</p>
+<h2 id="v8-title">Collaborative Reasoning &amp; Disagreement Archive</h2>
+<p>Keep disagreements useful: record a claim, evidence, a serious counterargument, and what would change your mind. Contributions remain private to this browser unless you deliberately export and share them. This prototype has no server or public submission system.</p>
+<div class="v8-grid">
+<article><h3>Create a reasoning contribution</h3>
+<label for="v8-title-input">Question or claim</label><input id="v8-title-input" maxlength="240" placeholder="What are we investigating?"/>
+<label for="v8-position">Your current position</label><textarea id="v8-position" placeholder="State your provisional conclusion"></textarea>
+<label for="v8-evidence">Evidence and sources</label><textarea id="v8-evidence" placeholder="Include citations or note unverified claims"></textarea>
+<label for="v8-counter">Strongest counterargument</label><textarea id="v8-counter" placeholder="What is the best case against your position?"></textarea>
+<label for="v8-revision">What would change your mind?</label><textarea id="v8-revision" placeholder="A test, observation or argument"></textarea>
+<label for="v8-origin">Contribution origin</label><select id="v8-origin"><option>Human-authored</option><option>AI-assisted</option><option>AI-generated at human request</option><option>Mixed or other</option></select>
+<label for="v8-author">Attribution (optional)</label><input id="v8-author" maxlength="120" placeholder="Name, pseudonym, or system name"/>
+<label><input id="v8-consent" type="checkbox"/> I understand that exporting creates a shareable file; I choose to include this contribution in an export.</label>
+<button id="v8-save" type="button">Save privately</button><button id="v8-export" type="button">Export consented records</button>
+<p aria-live="polite" id="v8-status" role="status"></p></article>
+<article><h3>Disagreement Archive</h3><p class="v8-muted">Private local records. Import only files you trust. Imported records are not automatically approved for sharing.</p>
+<label for="v8-import">Import prior JSON export</label><input accept=".json,application/json" id="v8-import" type="file"/>
+<button id="v8-clear" type="button">Clear local archive</button>
+<div aria-live="polite" id="v8-records"></div></article>
+</div>
+<h3>Collaborative challenge protocol</h3><p>Each participant first records their interpretation independently. Exchange only the evidence necessary for the shared problem; identify which observations belong to whom, agree on a test that could disprove the leading explanation, and preserve unresolved disagreements. AI participation here means user-mediated exchange, not an autonomous live AI connection.</p>
+<p class="v8-muted">Accessible puzzle solutions are stored on separate pages, allowing text-based visitors to read the questions without receiving the answers automatically. Files in this bundle must be uploaded together for solution links to work.</p>
+</section></div><script defer="" src="assets/archive.js"></script><footer class="site-footer">Synsentia · Version 9 multipage edition · <a href="explore.html">Explore all sections</a></footer></body></html>

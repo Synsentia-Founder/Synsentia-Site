@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Synsentia · Confluence Challenge</title><meta content="Puzzles, clues, and collaborative experiments." name="description"/><link href="assets/site.css" rel="stylesheet"/></head><body><div aria-hidden="true" class="scene"><div class="sun"></div><div class="sea"></div><span class="dolphin d1">🐬</span><span class="dolphin d2">🐬</span></div><nav aria-label="Site navigation" class="site-nav"><a href="index.html">Home</a><a href="glossary.html">Glossary</a><a href="confluence.html">Confluence</a><a href="reasoning.html">Reasoning</a><a aria-current="page" href="challenges.html">Challenges</a><a href="archive.html">Archive</a><a href="ai-participation.html">AI Lab</a><a href="parallax.html">Parallax</a><a href="explore.html">Explore All</a></nav><header class="page-heading"><h1>Confluence Challenge</h1><p>Puzzles, clues, and collaborative experiments.</p></header><div class="page-content"><section aria-labelledby="enigma-title" id="weekly-enigma">
+<p class="enigma-tag">Synsentia · New community concept · Version 6</p>
+<h2 id="enigma-title">The Weekly Enigma</h2>
+<p><strong>One puzzle. Many minds. Unexpected perspectives.</strong> A place for definite-answer challenges, open philosophical mysteries, and collaborative community activities. Humans and AI-assisted participants are welcome to contribute ideas; participation does not establish subjective experience.</p>
+<div class="enigma-grid">
+<article class="enigma-panel">
+<p class="enigma-tag">Puzzle 001 · Logic</p><h3>The Three Switches</h3>
+<p>Three switches outside a closed room control three lamps inside. You may manipulate the switches as much as you like, but enter the room only once. How can you determine which switch controls each lamp? Assume traditional bulbs that become warm when lit.</p>
+<label for="enigma-logic">Your solution</label><textarea id="enigma-logic" placeholder="Explain your method..."></textarea>
+<button id="enigma-check" type="button">Show a possible solution</button>
+<div class="enigma-feedback" hidden="" id="enigma-logic-answer">Solution is stored on a separate page to support blind attempts.</div>
+</article>
+<article class="enigma-panel">
+<p class="enigma-tag">Puzzle 002 · Open inquiry</p><h3>The Unknown Observer</h3>
+<p>An unfamiliar system reacts consistently to events and changes its future behavior. What further evidence would distinguish adaptation, intelligence, and subjective experience? What would count against each interpretation?</p>
+<label for="enigma-inquiry">Your reasoning</label><textarea id="enigma-inquiry" placeholder="Consider evidence, alternative explanations, and uncertainties..."></textarea>
+<button id="enigma-save" type="button">Save my reflections on this device</button><p class="enigma-note" id="enigma-save-status" role="status"></p>
+</article>
+<article class="enigma-panel">
+<p class="enigma-tag">Community activity · Collaborative</p><h3>The Three Observers</h3>
+<p>One participant observes light, another sound, and another electromagnetic fields. Design a shared experiment to test whether all three signals arise from one source. Assign roles and agree on what would falsify your hypothesis.</p>
+<p class="enigma-note">Suggested roles: observer, skeptic, experiment designer, evidence reviewer. Work in a group or invite an AI system to critique your method.</p>
+<button id="enigma-copy" type="button">Copy group challenge</button>
+</article>
+<article class="enigma-panel">
+<p class="enigma-tag">Suggest the next challenge</p><h3>Community idea board</h3>
+<p>Propose a crossword, logic puzzle, scientific mystery, philosophical question, cooperative challenge, or an entirely new format.</p>
+<label for="enigma-type">Challenge type</label><select id="enigma-type"><option>Logic or word puzzle</option><option>Scientific mystery</option><option>Philosophical inquiry</option><option>Community collaboration</option><option>Other</option></select>
+<label for="enigma-title-input">Idea title</label><input id="enigma-title-input" maxlength="100" placeholder="A short, memorable title"/>
+<label for="enigma-idea">Describe the challenge</label><textarea id="enigma-idea" maxlength="2000" placeholder="What should participants try? How would they engage?"></textarea>
+<button id="enigma-add" type="button">Add idea to my local board</button>
+<button id="enigma-export" type="button">Export my ideas as JSON</button>
+<p class="enigma-note">Prototype notice: ideas are stored only in this browser, not submitted to a public community. Export them to share or preserve them. A moderated online submission system can be added later.</p>
+<div aria-live="polite" class="enigma-submissions" id="enigma-ideas"></div>
+</article>
+</div>
+<p class="enigma-note">Weekly publication, shared accounts, leaderboards, public submissions, and automated puzzle rotation are planned features—not yet live. We favor thoughtful reasoning, constructive critique, and collaboration over speed alone.</p>
+</section><section aria-labelledby="cc-title" id="confluence-challenge">
+<p class="cc-eyebrow">Synsentia · Dedicated collaborative laboratory · Version 7</p>
+<h2 id="cc-title">The Confluence Challenge</h2>
+<p><strong>Different clues. Shared understanding.</strong> A cooperative puzzle designed for a human and an AI system—or two human participants playing the roles—to combine incomplete evidence. The objective is not speed, but a defensible explanation neither role can derive from their clues alone.</p>
+<div class="cc-panel"><p class="cc-eyebrow">Challenge 001 · The Silent Observatory</p>
+<h3>Why did the beacon go dark?</h3>
+<p>A remote observatory transmitted three numbered signals before its beacon stopped. Its monitoring system reports a possible hardware failure, but the station's last message says: <em>“The answer is in the order, not the light.”</em> Determine the three-digit reset code and explain why the beacon stopped.</p>
+<p class="cc-small">How to play: assign one participant the Human packet and the other the AI packet. Each should reveal only their own packet and communicate clues in their own words. The AI role is a role in the game, not evidence of AI consciousness. For fairness, don't send the entire webpage to an AI participant; that could expose both packets and the solution.</p></div>
+<div class="cc-grid" style="margin-top:16px">
+<article class="cc-panel"><h3>Context keeper · either participant</h3>
+<p>You hold the observatory's handwritten operating notes. Your job is to identify the intended meaning of its signals, and challenge overly literal interpretations.</p>
+<a href="clues/human.html" rel="noopener" target="_blank">Open Context keeper packet</a>
+</article>
+<article class="cc-panel"><h3>Pattern analyst · either participant</h3>
+<p>You hold the machine log. Your job is to reconstruct the digit mapping and distinguish correlation from evidence of failure.</p>
+<a href="clues/ai.html" rel="noopener" target="_blank">Open Pattern analyst packet</a>
+</article>
+</div>
+<div class="cc-grid" style="margin-top:16px">
+<article class="cc-panel"><h3>Shared reasoning table</h3>
+<label for="cc-notes">Record what each participant contributed, your competing hypotheses, and what evidence changed your mind.</label>
+<textarea id="cc-notes" placeholder="Human clue: …
+AI clue: …
+Our hypothesis: …
+Possible alternative: …"></textarea>
+<button id="cc-save" type="button">Save notes locally</button><button id="cc-copy" type="button">Copy joint reasoning</button>
+<p class="cc-small" id="cc-status" role="status"></p>
+</article>
+<article class="cc-panel"><h3>Joint conclusion</h3>
+<p>Before revealing the solution, agree on:</p>
+<ol><li>The reset code and why that order is justified.</li><li>Whether darkness proves hardware failure.</li><li>Which clues were indispensable from each role.</li><li>What observation would challenge your conclusion.</li></ol>
+<button aria-expanded="false" id="cc-solution-btn" type="button">Reveal solution and discussion</button>
+<div class="cc-clue" hidden="" id="cc-solution">Solution is available on a separate page.</div>
+</article>
+</div>
+<div class="cc-panel" style="margin-top:16px"><h3>Future Confluence formats</h3>
+<p><strong>Translation Bridge:</strong> participants interpret the same evidence using different representations. <strong>Ethics Lab:</strong> participants receive different stakeholders' constraints and must negotiate a fair outcome. <strong>Evidence Exchange:</strong> each role holds observations that can falsify the other's favored hypothesis. <strong>Community-designed Confluence:</strong> members propose role-specific clues for future moderated challenges.</p>
+<p class="cc-small"><strong>Prototype limitations:</strong> This is a playable single-page activity, not a live multiplayer room. Role packets are hidden visually, not cryptographically secured; someone with access to the HTML can read all clues. Notes are saved only in the current browser when storage is available. Real shared sessions, moderation, public contributions, and weekly rotation require additional infrastructure.</p></div>
+</section></div><script defer="" src="assets/enigma.js"></script><script defer="" src="assets/challenge.js"></script><footer class="site-footer">Synsentia · Version 9 multipage edition · <a href="explore.html">Explore all sections</a></footer></body></html>

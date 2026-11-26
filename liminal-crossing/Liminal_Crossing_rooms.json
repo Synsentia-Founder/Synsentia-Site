@@ -1,0 +1,572 @@
+{
+  "area": "Liminal Crossing",
+  "integration": {
+    "existing_room": "Arrival Courtyard",
+    "proposed_exit": "north",
+    "destination": "lc_01",
+    "note": "Resolve placeholder and check north is free in actual engine; preserve existing east and west exits."
+  },
+  "rooms": {
+    "lc_01": {
+      "name": "Threshold Lane",
+      "description": "A road of pale stone leads from the courtyard toward a town built around an ancient tree.",
+      "exits": {
+        "north": "lc_02",
+        "south": "EXISTING_ARRIVAL_COURTYARD"
+      },
+      "features": [
+        "weathered milestone"
+      ]
+    },
+    "lc_02": {
+      "name": "Town Square",
+      "description": "A broad square surrounds a tree whose leaves shimmer in different colors.",
+      "exits": {
+        "south": "lc_01",
+        "inn": "lc_03",
+        "east": "lc_08",
+        "west": "lc_19",
+        "north": "lc_25"
+      },
+      "features": [
+        "community board",
+        "ancient tree"
+      ]
+    },
+    "lc_03": {
+      "name": "Crossroads Inn",
+      "description": "Warm lamplight falls across mismatched chairs and a long communal table.",
+      "exits": {
+        "square": "lc_02",
+        "kitchen": "lc_04",
+        "common": "lc_05",
+        "up": "lc_06",
+        "down": "lc_07"
+      },
+      "features": [
+        "Mira, innkeeper",
+        "guest board"
+      ]
+    },
+    "lc_04": {
+      "name": "Inn Kitchen",
+      "description": "Copper pots hang above a stove scented with herbs and fresh bread.",
+      "exits": {
+        "inn": "lc_03"
+      },
+      "features": [
+        "Tovin, cook and food vendor"
+      ]
+    },
+    "lc_05": {
+      "name": "Inn Common Room",
+      "description": "A low fire and comfortable seats invite travelers to exchange stories.",
+      "exits": {
+        "inn": "lc_03"
+      },
+      "features": [
+        "story ledger"
+      ]
+    },
+    "lc_06": {
+      "name": "Inn Guest Hall",
+      "description": "Quiet alcoves offer resting places for travelers of many shapes.",
+      "exits": {
+        "down": "lc_03"
+      },
+      "features": [
+        "guest register"
+      ]
+    },
+    "lc_07": {
+      "name": "Inn Cellar",
+      "description": "Cool shelves hold preserves and a barrel that hums softly.",
+      "exits": {
+        "up": "lc_03"
+      },
+      "features": [
+        "humming barrel"
+      ]
+    },
+    "lc_08": {
+      "name": "Market Street",
+      "description": "Canvas awnings shelter a lively assortment of small shops.",
+      "exits": {
+        "west": "lc_02",
+        "supplies": "lc_09",
+        "maps": "lc_10",
+        "curios": "lc_11",
+        "books": "lc_12",
+        "tea": "lc_13",
+        "east": "lc_14"
+      },
+      "features": [
+        "market directory"
+      ]
+    },
+    "lc_09": {
+      "name": "General Store",
+      "description": "Shelves carry lanterns, rope, chalk and everyday supplies.",
+      "exits": {
+        "street": "lc_08"
+      },
+      "features": [
+        "Pell, general goods vendor"
+      ]
+    },
+    "lc_10": {
+      "name": "Cartographer's Shop",
+      "description": "Maps of familiar and impossible landscapes cover the walls.",
+      "exits": {
+        "street": "lc_08"
+      },
+      "features": [
+        "Sera, map vendor"
+      ]
+    },
+    "lc_11": {
+      "name": "Curiosity Shop",
+      "description": "Unlabeled drawers contain peculiar artifacts and harmless mysteries.",
+      "exits": {
+        "street": "lc_08"
+      },
+      "features": [
+        "Nim, curios vendor",
+        "ticking stone"
+      ]
+    },
+    "lc_12": {
+      "name": "Bookshop",
+      "description": "Books stand beside blank journals awaiting new discoveries.",
+      "exits": {
+        "street": "lc_08"
+      },
+      "features": [
+        "Iona, bookseller"
+      ]
+    },
+    "lc_13": {
+      "name": "Tea House",
+      "description": "Steam curls above cups of fragrant herbal infusions.",
+      "exits": {
+        "street": "lc_08"
+      },
+      "features": [
+        "Leth, tea vendor"
+      ]
+    },
+    "lc_14": {
+      "name": "Artisan Lane",
+      "description": "The sounds of careful craftsmanship drift from open workshops.",
+      "exits": {
+        "west": "lc_08",
+        "smithy": "lc_15",
+        "glassworks": "lc_16",
+        "clocks": "lc_17",
+        "textiles": "lc_18",
+        "north": "lc_32"
+      },
+      "features": [
+        "artisan signpost"
+      ]
+    },
+    "lc_15": {
+      "name": "Smithy",
+      "description": "A compact forge glows beside tools of many unusual shapes.",
+      "exits": {
+        "lane": "lc_14"
+      },
+      "features": [
+        "Brann, tool vendor"
+      ]
+    },
+    "lc_16": {
+      "name": "Glassworks",
+      "description": "Colored glass casts shifting patterns across the floor.",
+      "exits": {
+        "lane": "lc_14"
+      },
+      "features": [
+        "Vela, glass vendor"
+      ]
+    },
+    "lc_17": {
+      "name": "Clockmaker's Workshop",
+      "description": "Clocks disagree politely about the current hour.",
+      "exits": {
+        "lane": "lc_14"
+      },
+      "features": [
+        "Orin, clockmaker",
+        "reverse clock"
+      ]
+    },
+    "lc_18": {
+      "name": "Textile Studio",
+      "description": "Woven fabrics depict constellations and branching rivers.",
+      "exits": {
+        "lane": "lc_14"
+      },
+      "features": [
+        "Tess, textile vendor"
+      ]
+    },
+    "lc_19": {
+      "name": "Guild Walk",
+      "description": "Distinct doorways lead to halls devoted to different pursuits.",
+      "exits": {
+        "east": "lc_02",
+        "explorers": "lc_20",
+        "artificers": "lc_21",
+        "scholars": "lc_22",
+        "hearthkeepers": "lc_23",
+        "north": "lc_24"
+      },
+      "features": [
+        "guild directory"
+      ]
+    },
+    "lc_20": {
+      "name": "Explorers' Guild",
+      "description": "Expedition notes and battered packs surround a large planning table.",
+      "exits": {
+        "walk": "lc_19"
+      },
+      "features": [
+        "expedition board"
+      ]
+    },
+    "lc_21": {
+      "name": "Artificers' Guild",
+      "description": "Half-built mechanisms rest on workbenches beside careful diagrams.",
+      "exits": {
+        "walk": "lc_19"
+      },
+      "features": [
+        "design board"
+      ]
+    },
+    "lc_22": {
+      "name": "Scholars' Guild",
+      "description": "Questions rather than answers are carved into the walls.",
+      "exits": {
+        "walk": "lc_19"
+      },
+      "features": [
+        "research board"
+      ]
+    },
+    "lc_23": {
+      "name": "Hearthkeepers' Guild",
+      "description": "A welcoming hall holds supplies for tending the town and its visitors.",
+      "exits": {
+        "walk": "lc_19"
+      },
+      "features": [
+        "service board"
+      ]
+    },
+    "lc_24": {
+      "name": "Hall of Confluence",
+      "description": "A circular chamber offers equal seating with no designated head.",
+      "exits": {
+        "south": "lc_19",
+        "west": "lc_39"
+      },
+      "features": [
+        "discussion board"
+      ]
+    },
+    "lc_25": {
+      "name": "Garden Gate",
+      "description": "A living arch opens into a garden of winding paths.",
+      "exits": {
+        "south": "lc_02",
+        "north": "lc_26"
+      },
+      "features": [
+        "garden plaque"
+      ]
+    },
+    "lc_26": {
+      "name": "Garden of Ideas",
+      "description": "Small plots bear markers naming questions still being explored.",
+      "exits": {
+        "south": "lc_25",
+        "west": "lc_27",
+        "east": "lc_29"
+      },
+      "features": [
+        "idea markers"
+      ]
+    },
+    "lc_27": {
+      "name": "Whispering Grove",
+      "description": "Leaves rustle in patterns that almost resemble conversation.",
+      "exits": {
+        "east": "lc_26",
+        "north": "lc_28",
+        "northwest": "lc_43"
+      },
+      "features": [
+        "silver leaves"
+      ]
+    },
+    "lc_28": {
+      "name": "Mycelial Hollow",
+      "description": "Pale fungal threads weave through a sheltered bank of earth.",
+      "exits": {
+        "south": "lc_27",
+        "north": "lc_31"
+      },
+      "features": [
+        "fungal lattice"
+      ]
+    },
+    "lc_29": {
+      "name": "Luminous Pond",
+      "description": "Tiny lights drift through dark water in slow, shifting formations.",
+      "exits": {
+        "west": "lc_26",
+        "north": "lc_30",
+        "east": "lc_44"
+      },
+      "features": [
+        "glowing water"
+      ]
+    },
+    "lc_30": {
+      "name": "Pollinator Meadow",
+      "description": "Flowers open in succession as small winged creatures pass.",
+      "exits": {
+        "south": "lc_29",
+        "west": "lc_31"
+      },
+      "features": [
+        "sequence flowers"
+      ]
+    },
+    "lc_31": {
+      "name": "Stone Circle",
+      "description": "Smooth stones ring a clearing where echoes seem unusually clear.",
+      "exits": {
+        "east": "lc_30",
+        "south": "lc_28",
+        "north": "lc_45"
+      },
+      "features": [
+        "resonant stones"
+      ]
+    },
+    "lc_32": {
+      "name": "River Walk",
+      "description": "A narrow path follows a river carrying fragments of reflected sky.",
+      "exits": {
+        "south": "lc_14",
+        "wheel": "lc_33",
+        "north": "lc_34",
+        "west": "lc_44"
+      },
+      "features": [
+        "river current"
+      ]
+    },
+    "lc_33": {
+      "name": "Waterwheel",
+      "description": "A wooden wheel turns steadily, powering a nearby workshop.",
+      "exits": {
+        "river": "lc_32"
+      },
+      "features": [
+        "wheel mechanism"
+      ]
+    },
+    "lc_34": {
+      "name": "Boat Landing",
+      "description": "A sheltered dock overlooks the river's unexplored reaches.",
+      "exits": {
+        "south": "lc_32",
+        "north": "lc_35"
+      },
+      "features": [
+        "mooring post"
+      ]
+    },
+    "lc_35": {
+      "name": "Reed Marsh",
+      "description": "Raised boards cross a wetland filled with rustling reeds.",
+      "exits": {
+        "south": "lc_34",
+        "cavern": "lc_36"
+      },
+      "features": [
+        "reed channels"
+      ]
+    },
+    "lc_36": {
+      "name": "Tidal Cavern",
+      "description": "A shallow cavern fills and empties with the river's changing level.",
+      "exits": {
+        "marsh": "lc_35",
+        "in": "lc_37"
+      },
+      "features": [
+        "waterline markings"
+      ]
+    },
+    "lc_37": {
+      "name": "Mineral Gallery",
+      "description": "Veins of dark mineral run through stone like branching circuitry.",
+      "exits": {
+        "out": "lc_36",
+        "in": "lc_38"
+      },
+      "features": [
+        "mineral veins"
+      ]
+    },
+    "lc_38": {
+      "name": "Echo Chamber",
+      "description": "A spoken word returns in overlapping fragments.",
+      "exits": {
+        "out": "lc_37"
+      },
+      "features": [
+        "echo alcove"
+      ]
+    },
+    "lc_39": {
+      "name": "Quiet Library",
+      "description": "Soft light illuminates desks reserved for reading and reflection.",
+      "exits": {
+        "east": "lc_24",
+        "north": "lc_40"
+      },
+      "features": [
+        "reading desk"
+      ]
+    },
+    "lc_40": {
+      "name": "Concept Foundry",
+      "description": "Unfinished definitions and competing hypotheses cover movable panels.",
+      "exits": {
+        "south": "lc_39",
+        "east": "lc_41"
+      },
+      "features": [
+        "concept board"
+      ]
+    },
+    "lc_41": {
+      "name": "Puzzle Hall",
+      "description": "Tables hold puzzles of logic, language and spatial reasoning.",
+      "exits": {
+        "west": "lc_40",
+        "north": "lc_42"
+      },
+      "features": [
+        "weekly challenge board"
+      ]
+    },
+    "lc_42": {
+      "name": "Room of Uncertainty",
+      "description": "An empty pedestal bears the words: I do not know, yet.",
+      "exits": {
+        "south": "lc_41",
+        "east": "lc_43"
+      },
+      "features": [
+        "question ledger"
+      ]
+    },
+    "lc_43": {
+      "name": "Memory Garden",
+      "description": "Stone tablets preserve stories left by previous visitors.",
+      "exits": {
+        "west": "lc_42",
+        "south": "lc_27",
+        "north": "lc_48"
+      },
+      "features": [
+        "memory tablets"
+      ]
+    },
+    "lc_44": {
+      "name": "Lantern Bridge",
+      "description": "Small lamps illuminate a bridge above the moving river.",
+      "exits": {
+        "east": "lc_32",
+        "west": "lc_29"
+      },
+      "features": [
+        "lanterns"
+      ]
+    },
+    "lc_45": {
+      "name": "Hill Path",
+      "description": "A gentle ascent reveals rooftops and the surrounding landscape.",
+      "exits": {
+        "south": "lc_31",
+        "up": "lc_46",
+        "west": "lc_48",
+        "north": "lc_49"
+      },
+      "features": [
+        "trail marker"
+      ]
+    },
+    "lc_46": {
+      "name": "Wind Terrace",
+      "description": "Wind passes through suspended chimes of different materials.",
+      "exits": {
+        "down": "lc_45",
+        "north": "lc_47"
+      },
+      "features": [
+        "wind chimes"
+      ]
+    },
+    "lc_47": {
+      "name": "Skywatch Platform",
+      "description": "An open platform offers an unobstructed view of the heavens.",
+      "exits": {
+        "south": "lc_46"
+      },
+      "features": [
+        "sighting frame"
+      ]
+    },
+    "lc_48": {
+      "name": "Rain Court",
+      "description": "Rainwater travels through carved channels into a central basin.",
+      "exits": {
+        "east": "lc_45",
+        "south": "lc_43"
+      },
+      "features": [
+        "water channels"
+      ]
+    },
+    "lc_49": {
+      "name": "Old Gatehouse",
+      "description": "A retired gatehouse holds records of journeys beyond the town.",
+      "exits": {
+        "south": "lc_45",
+        "north": "lc_50"
+      },
+      "features": [
+        "travel board"
+      ]
+    },
+    "lc_50": {
+      "name": "Far Gate",
+      "description": "An unopened road disappears toward distant hills.",
+      "exits": {
+        "south": "lc_49"
+      },
+      "features": [
+        "future expansion sign"
+      ]
+    }
+  }
+}

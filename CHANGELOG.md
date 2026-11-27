@@ -13,3 +13,10 @@ Added six conversation-derived inquiry pathways and 24 open questions to reasoni
 - Added eight-principle Living Ethos, searchable Living Library, interactive Evolution of Ideas, Serendipitous Discoveries, Confluence Review, and Tributes.
 - Added Development Chronicles, README notes, and cross-links while preserving the original seven homepage principles.
 - All new features run on static hosting; community submission infrastructure remains future work.
+
+## 2026-11-27 — Homepage navigation and discovery refresh (candidate)
+- Replaced the homepage's ten-link top navigation with a compact, native HTML disclosure menu and Explore All link.
+- Reorganized nineteen homepage destination cards into three curated entry points and a categorized editorial directory, retaining all original destination links.
+- Preserved artwork, mission, original principles, and other pages.
+- Used flexible text sizing, wrapping, 44px minimum interactive targets, keyboard focus indicators, and no JavaScript dependency for the menu.
+- Pending manual mobile, enlarged-text, keyboard, screen-reader, and live deployment checks.

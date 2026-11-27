@@ -102,3 +102,49 @@ main{margin:0 auto 60px;padding:0 16px;width:min(100%,760px)}.glossary-heading{f
 .home-redesign :is(.home-brand,.home-top-links a,.home-menu summary,.home-menu-links a,.home-pathways a,.directory-columns a,.directory-footer a):focus-visible{outline:3px solid #ffe1bf;outline-offset:3px}
 @media(max-width:650px){.directory-columns{grid-template-columns:1fr;gap:.65rem}.directory-columns>div{border-bottom:1px solid #ffffff33;padding-bottom:.55rem}.home-redesign .home-header{padding:.6rem .75rem}.home-pathways a{padding:.85rem}.home-directory{padding-inline:.2rem}}
 @media(max-width:350px){.home-top-links{width:100%;justify-content:space-between}.home-menu-links{right:auto;left:0}.pathway-symbol{display:none}}
+
+/* Artful homepage: spacious illustration, progressive-disclosure directory. */
+.home-artful .home-header{margin-bottom:.5rem;background:rgba(8,19,51,.64);border-color:#ffe1bf66}
+.home-artful .welcome{max-width:1050px;padding-top:.25rem}
+.home-artful .artful-stage{position:relative;min-height:clamp(290px,52vw,570px);display:grid;place-items:center;isolation:isolate;margin:0 auto .6rem}
+.home-artful .artful-stage::before{content:"";position:absolute;inset:3% 6%;z-index:-1;border-radius:50%;background:radial-gradient(ellipse,#f5bb8a38 0%,#d886ab17 42%,transparent 72%);filter:blur(12px)}
+.home-artful .welcome-emblem{width:min(78vw,560px);height:auto;aspect-ratio:390/320;object-fit:cover;border:3px solid #ffe2af;box-shadow:0 0 45px #ffcf8d8c,0 0 100px #e888c044;margin:0}
+.home-artful .welcome h1{margin-top:0}
+.home-artful .home-intro{margin-bottom:1rem}
+.home-artful .artful-invitations{display:flex;justify-content:center;flex-wrap:wrap;gap:.65rem;margin:1.25rem auto 1.5rem;max-width:900px}
+.home-artful .artful-invitations a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;max-width:100%;padding:.7rem 1.05rem;border:1px solid #ffe0b9a6;border-radius:999px;background:#112e51a6;backdrop-filter:blur(8px);color:#fff8f3;text-decoration:none;font-size:1rem;font-weight:650;line-height:1.4;text-align:center;overflow-wrap:anywhere}
+.home-artful .artful-invitations a:hover{background:#315474}
+.home-artful .artful-directory{max-width:850px;margin:1.2rem auto 0;border:1px solid #ffe1bf80;border-radius:20px;padding:0;background:#0b2340b5;backdrop-filter:blur(10px);text-align:left}
+.home-artful .artful-directory>summary{list-style:none;cursor:pointer;min-height:56px;padding:1rem 3.1rem 1rem 1.3rem;font:700 clamp(1.05rem,2.6vw,1.3rem) Georgia,serif;line-height:1.45;position:relative}
+.home-artful .artful-directory>summary::-webkit-details-marker{display:none}
+.home-artful .artful-directory>summary::after{content:'+';position:absolute;right:1.2rem;top:50%;transform:translateY(-50%);font:700 1.6rem system-ui}
+.home-artful .artful-directory[open]>summary::after{content:'−'}
+.home-artful .artful-directory>p,.home-artful .artful-directory>.directory-columns{margin:0 1.3rem 1rem}
+.home-artful .artful-directory>.directory-footer{margin:0 1.3rem 1rem}
+.home-artful .artful-directory>summary:focus-visible,.home-artful .artful-invitations a:focus-visible{outline:3px solid #ffe1bf;outline-offset:3px}
+@media(max-width:650px){.home-artful .artful-stage{min-height:clamp(260px,75vw,420px)}.home-artful .welcome-emblem{width:min(87vw,390px)}.home-artful .artful-invitations{gap:.5rem}.home-artful .artful-invitations a{padding:.7rem .9rem}.home-artful .artful-directory>.directory-columns{margin-inline:.9rem}}
+@media(prefers-reduced-transparency:reduce){.home-artful .artful-directory,.home-artful .artful-invitations a{backdrop-filter:none;background:#0b2340}}
+
+/* Accessible expandable navigation: hover highlights; click, touch or keyboard expands. */
+.home-artful .home-menu-links{gap:.3rem;overscroll-behavior:contain}
+.home-artful .nav-group{border:1px solid #ffffff32;border-radius:10px;min-width:0}
+.home-artful .nav-group>summary{display:flex;align-items:center;justify-content:space-between;gap:.6rem;min-height:44px;padding:.65rem .85rem;cursor:pointer;font:650 1rem/1.4 system-ui,sans-serif;list-style:none;color:#fff8f3;overflow-wrap:anywhere}
+.home-artful .nav-group>summary::-webkit-details-marker{display:none}
+.home-artful .nav-group>summary::after{content:'+';font-size:1.3rem;flex:none}
+.home-artful .nav-group[open]>summary::after{content:'−'}
+.home-artful .nav-group>div{padding:.1rem .2rem .35rem .7rem;display:grid;gap:.1rem}
+.home-artful .nav-group a{font-size:1rem}
+.home-artful .nav-group>summary:hover,.home-artful .nav-group>summary:focus-visible,.home-artful .directory-accordions summary:hover{background:#345374}
+.home-artful .nav-all{font-weight:700;border-top:1px solid #ffffff44}
+.home-artful .directory-accordions{display:grid;gap:.6rem;margin:0 1.3rem 1rem}
+.home-artful .directory-accordions>details{border:1px solid #ffffff55;border-radius:12px;background:#102e4e99;min-width:0}
+.home-artful .directory-accordions>details>summary{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.4rem;cursor:pointer;min-height:56px;padding:.85rem 1rem;list-style:none;font:700 clamp(1.05rem,2.4vw,1.2rem)/1.45 Georgia,serif}
+.home-artful .directory-accordions>details>summary::-webkit-details-marker{display:none}
+.home-artful .directory-accordions>details>summary span{font:400 .95rem/1.45 system-ui,sans-serif;color:#ffe1bf}
+.home-artful .directory-accordions>details>summary::after{content:'+';font:700 1.5rem system-ui;flex:none}
+.home-artful .directory-accordions>details[open]>summary::after{content:'−'}
+.home-artful .directory-group-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:.2rem .7rem;padding:.3rem .65rem .75rem}
+.home-artful .directory-group-links a{display:flex;align-items:center;min-height:44px;padding:.55rem .65rem;color:#fff8f3;line-height:1.5;text-underline-offset:3px;overflow-wrap:anywhere;border-radius:8px}
+.home-artful .directory-group-links a:hover,.home-artful .directory-group-links a:focus-visible{background:#345374}
+.home-artful :is(.nav-group>summary,.directory-accordions summary,.directory-group-links a):focus-visible{outline:3px solid #ffe1bf;outline-offset:2px}
+@media(max-width:650px){.home-artful .directory-accordions{margin-inline:.9rem}.home-artful .directory-accordions>details>summary{align-items:flex-start}.home-artful .directory-accordions>details>summary span{width:100%}}

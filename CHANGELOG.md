@@ -1,3 +1,12 @@
+
+## 2026-11-27 — Expandable, art-preserving navigation
+- Homepage menu now groups destinations into native HTML expandable sections.
+- Homepage idea directory now offers three individually expandable thematic sections.
+- Standard links stay in source HTML for crawlers, screen readers, and no-JavaScript visitors.
+- Hover is visual feedback only; click/tap/keyboard selection controls expansion.
+- Existing artwork, text, and destination links preserved. No other pages edited.
+- Manual phone, screen-reader, large-text and cross-page CSS regression testing still recommended.
+
 # Version 9
 Merged Version 7 navigation and contrast with Version 8 archive and observatory. Added interchangeable roles, separate clue pages, revision history, export consent withdrawal, transactional storage and Parallax trial export. Original V8 summary attributes implementation to Aurora following independent evaluation; precise authorship remains uncertain. No shared backend. Browser testing pending.
 
@@ -20,3 +29,10 @@ Added six conversation-derived inquiry pathways and 24 open questions to reasoni
 - Preserved artwork, mission, original principles, and other pages.
 - Used flexible text sizing, wrapping, 44px minimum interactive targets, keyboard focus indicators, and no JavaScript dependency for the menu.
 - Pending manual mobile, enlarged-text, keyboard, screen-reader, and live deployment checks.
+
+## 2026-11-27 - Artful navigation refinement
+- Restored visual emphasis to the homepage emblem, with a larger artwork stage.
+- Replaced three large stacked pathway cards with readable, compact invitation links.
+- Moved the complete themed directory into a native HTML details/summary disclosure, keeping all links present in the HTML for crawlers and no-JavaScript visitors.
+- Retained keyboard access, visible focus, flexible text sizing, and the existing top menu.
+- No other HTML pages changed.
